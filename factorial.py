@@ -1,17 +1,12 @@
 def recursiveFact (num) :
-    return num * recursiveFact(num-1) if num > 1 else 1;
+    return num * recursiveFact(num-1) if num > 1 else 1
 
-def iterativeFact (num) :
-    if num < 0 :
-        return 0
-    elif num == 0 or num ==1 :
-        return 1
-    else :
-        fact =1
-        while (num>1) :
-            fact  = fact * num
-            num =num-1
-            return fact
+def iterativeFact (n) :
+    num = 1
+    while n >= 1:
+        num = num * n
+        n = n - 1
+    return num
 
 import math
 def inbuildFact (num) :
@@ -21,11 +16,13 @@ if __name__ == '__main__' :
     number= int (input ("Enter a number:"))
     type=input ("Enter type of function [Recursive , Iterative , Inbuild]")
     if type == "Recursive" :
-        recursiveFact(number)
+       print("Result of recursiveFact function is ",recursiveFact(number))
     elif type == "Iterative" :
-        iterativeFact(number)
+        print("Result of iterativeFact function is ",iterativeFact(number))
     else :
-        inbuildFact(number)
+       print("Result of inbuildFact function is ",inbuildFact(number))
+
+
 
 
 
