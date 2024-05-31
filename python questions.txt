@@ -1,0 +1,93 @@
+-----Count the number of occurrences of a character in a string
+
+def check_freq(x):
+    freq = {}
+    for c in set(x):
+       freq[c] = x.count(c)
+    return freq
+
+check_freq("abbabcbdbabdbdbabababcbcbab")
+{'a': 7, 'b': 14, 'c': 3, 'd': 3}
+
+comprehension is desired:
+
+def check_freq(x):
+    return {c: x.count(c) for c in set(x)}
+
+def count_letter(text):
+    result = {}
+    for letter in text:
+        if letter not in result:
+            result[letter] = 0
+        result[letter] += 1
+    return result
+
+---string is palinrome
+
+---sort a dictonary
+
+---Find a pair with given number in a list
+
+---fibonacci series using recursion
+
+---string manipulation 
+reverse intput
+input = "the sky is blue"
+output="blue is sky the"
+
+----remove punctuation (except space)
+
+-----max repeated char in string
+s="aaabbbbccbbadbdd"
+ch={}
+for i in s:
+	if i in ch:
+		ch[i]+=1
+	else:
+		ch[i]=1
+print(ch)
+max_char=max(ch,key=ch.get)
+print(max_char)
+
+----find max and min value from a list
+l=[9,11,0,20,50,2,250]
+max=l[0]
+min=l[0]
+
+for i in l:
+	if i>max:
+		max=i
+	if i<min:
+		min=i
+print('maximum',max)
+print('minimum',min)
+
+---write a code to raise exception
+
+l=[1,2,3]
+sum=0
+for i in l:
+	if i==1:
+		raise Exception("Exception:1 is found")
+	else:
+		sum+=i
+
+----find least positive integer missing from a list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
